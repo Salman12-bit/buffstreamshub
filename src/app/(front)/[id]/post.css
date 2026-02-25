@@ -1,0 +1,182 @@
+.post-container {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  background-color: #0F172A;
+}
+
+.post-card {
+  width: 100%;
+  max-width: 800px;
+  background-color: #0F172A;
+  padding: 25px;
+  border-radius: 14px;
+  border: 1px solid #3b3b3b;
+  margin-top: 100px;
+}
+
+.card-glow {
+  box-shadow: 0 0 10px rgba(255, 180, 0, 0.25);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.post-title {
+  color: white;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.streams-tag {
+  background: #7f1d1d;
+  color: #fca5a5;
+  padding: 6px 10px;
+  font-size: 13px;
+  border-radius: 6px;
+}
+
+.stream-item {
+  margin-top: 20px;
+  background: #0f172a;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #3b3b3b;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.badge-hd {
+  background: #7f1d1d;
+  color: #fca5a5;
+  padding: 5px 8px;
+  font-size: 12px;
+  border-radius: 5px;
+}
+
+.stream-name {
+  font-size: 16px;
+  color: white;
+  font-weight: 500;
+}
+
+.lang-tag {
+  font-size: 14px;
+  color: #d1d5db;
+}
+
+.match-box {
+  margin-top: 20px;
+  background: #0f172a;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.waiting-text {
+  color: #e5e7eb;
+  font-size: 17px;
+}
+
+.date-text {
+  color: #9ca3af;
+  margin-top: 5px;
+}
+
+.stream-box {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+  margin-top: 20px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #000;
+}
+
+.stream-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* ====== New Edit Mode Styles ====== */
+
+.edit-wrapper {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.edit-box {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.edit-input {
+  flex: 1;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #3b3b3b;
+  background-color: #1f2937;
+  color: #fff;
+  font-size: 14px;
+}
+
+.edit-input::placeholder {
+  color: #9ca3af;
+}
+
+.edit-btn,
+.save-btn,
+.cancel-btn {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.edit-btn {
+  background-color: #2563eb;
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #1e40af;
+}
+
+.save-btn {
+  background-color: #16a34a;
+  color: white;
+}
+
+.save-btn:hover {
+  background-color: #15803d;
+}
+
+.cancel-btn {
+  background-color: #ef4444;
+  color: white;
+}
+
+.cancel-btn:hover {
+  background-color: #b91c1c;
+}
