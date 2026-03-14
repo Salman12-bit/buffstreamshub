@@ -4,7 +4,7 @@ export const metadata = {
     openGraph: {
         title: "Contact Us - BuffStream",
         description: "Have questions or need assistance? Contact the Buffstreams team for support, inquiries, and feedback.",
-        url: "https://buffstreamshub.com/contactus",
+        url: "https://buffstreamshub.com/contact",
         images: [
             {
                 url: "https://buffstreamshub.com/images/buffstream-contact.jpg",
