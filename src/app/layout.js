@@ -17,6 +17,19 @@ export default function RootLayout({ children }) {
 
       <body className={inter.className}>
 
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-VJE8ZMQWP5"
+        />
+
+        <Script id="google-analytics">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-VJE8ZMQWP5');
+          `}
+        </Script>
+
         <AuthProvider>
           <div className="container">
             <Navbar />

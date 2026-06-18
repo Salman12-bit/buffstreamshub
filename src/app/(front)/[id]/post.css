@@ -1,4 +1,4 @@
-.post-container {
+.post-wrap {
   display: flex;
   justify-content: center;
   padding: 40px 20px;
@@ -15,11 +15,11 @@
   margin-top: 100px;
 }
 
-.card-glow {
+.glow {
   box-shadow: 0 0 10px rgba(255, 180, 0, 0.25);
 }
 
-.card-header {
+.post-head {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -31,7 +31,7 @@
   font-weight: 700;
 }
 
-.streams-tag {
+.stream-tag {
   background: #7f1d1d;
   color: #fca5a5;
   padding: 6px 10px;
@@ -113,9 +113,7 @@
   border: none;
 }
 
-/* ====== New Edit Mode Styles ====== */
-
-.edit-wrapper {
+.edit-wrap {
   margin-top: 15px;
   display: flex;
   flex-direction: column;

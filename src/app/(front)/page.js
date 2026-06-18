@@ -15,14 +15,14 @@ export default function Home() {
     { name: "AMERICAN FOOTBALL", slug: "americanfootball", image: "/images/AmericanFootball.webp" },
     { name: "CRICKET", slug: "cricket", image: "/images/Cricket.webp" },
     { name: "BASEBALL", slug: "baseball", image: "/images/Baseball.webp" },
-    { name: "MOTOR-SPORTS", slug: "motorsports", image: "/images/Motorsports.webp" },
-    { name: "FIGHT", slug: "fight", image: "/images/Fight.webp" },
-    { name: "TENNIS", slug: "tennis", image: "/images/Tennis.webp" },
-    { name: "RUGBY", slug: "rugby", image: "/images/Rugby.webp" },
-    { name: "GOLF", slug: "golfs", image: "/images/Golf.webp" },
-    { name: "BILLIARDS", slug: "billiars", image: "/images/Billiards.webp" },
     { name: "AFL", slug: "afl", image: "/images/AFL.webp" },
+    { name: "FIGHT", slug: "fight", image: "/images/Fight.webp" },
+    { name: "MOTOR-SPORTS", slug: "motorsports", image: "/images/Motorsports.webp" },
+    { name: "GOLF", slug: "golfs", image: "/images/Golf.webp" },
+    { name: "RUGBY", slug: "rugby", image: "/images/Rugby.webp" },
+    { name: "TENNIS", slug: "tennis", image: "/images/Tennis.webp" },
     { name: "DARTS", slug: "dart", image: "/images/Darts.webp" },
+    { name: "BILLIARDS", slug: "billiars", image: "/images/Billiards.webp" },
     { name: "OTHERS", slug: "others", image: "/images/Others.webp" },
   ];
 
@@ -94,22 +94,24 @@ export default function Home() {
   };
   return (
     <div className="home">
-      <section className="global-watch-section">
-        <div className="global-watch-corner">
+
+      <section className="global-watch">
+        <div className="watch-time">
           ⏰ {formatGlobalTime(currentTime)} PKT
         </div>
       </section>
-      <section className="categories">
-        <div className="category-grid">
+
+      <section className="cat">
+        <div className="cat-grid">
 
           {sports.map(sport => (
             <div
               key={sport.slug}
-              className="category-card"
+              className="cat-card"
               onClick={() => handleCardClick(sport.slug)}
               style={{ cursor: "pointer" }}
             >
-              <span className="badge hover-badge">
+              <span className="badge">
                 {viewCounts[sport.slug] ?? 0} 👁️
               </span>
 
@@ -121,7 +123,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="passionate">
+      <section className="about">
         <p>
           Searching for a reliable place to stream live sports without constant buffering?
           <strong> BuffStreams</strong> is created for dedicated sports fans who don’t want
@@ -137,19 +139,15 @@ export default function Home() {
         </p>
       </section>
 
-      <section className="why-section">
+      <section className="why">
 
-        <h2 className="why-title">
-          <span></span>
-          WHY BUFFSTREAMS STANDS OUT
-          <span></span>
-        </h2>
+        <h2 className="title">WHY BUFFSTREAMS STANDS OUT</h2>
 
-        <div className="why-wrapper">
+        <div className="why-wrap">
 
           <div className="why-item">
-            <div className="why-number">1</div>
-            <div className="why-box">
+            <div className="num">1</div>
+            <div className="box">
               <h3>All-in-One Sports Streaming Platform</h3>
               <p>
                 Whatever sport you enjoy — <strong>cricket</strong>,
@@ -162,8 +160,8 @@ export default function Home() {
           </div>
 
           <div className="why-item">
-            <div className="why-number">2</div>
-            <div className="why-box">
+            <div className="num">2</div>
+            <div className="box">
               <h3>Crystal Clear HD Streaming</h3>
               <p>
                 Watch your favorite matches in sharp <strong>HD quality</strong>
@@ -175,8 +173,8 @@ export default function Home() {
           </div>
 
           <div className="why-item">
-            <div className="why-number">3</div>
-            <div className="why-box">
+            <div className="num">3</div>
+            <div className="box">
               <h3>Live Scores & Instant Updates</h3>
               <p>
                 Keep up with match schedules, live scores, and key highlights
@@ -189,13 +187,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="offer-section">
+      <section className="offer">
 
-        <h2 className="offer-title">
-          <span></span>
-          SPORTS YOU CAN WATCH
-          <span></span>
-        </h2>
+        <h2 className="title">SPORTS YOU CAN WATCH</h2>
 
         <div className="offer-grid">
 
@@ -246,7 +240,7 @@ export default function Home() {
 
       </section>
 
-      <section className="commit-section">
+      <section className="commit">
         <div className="commit-box">
           <h2>Our Commitment to Sports Viewers</h2>
           <p>
@@ -259,15 +253,15 @@ export default function Home() {
             With quick match access and dependable performance, BuffStreams
             helps you enjoy the game without unnecessary interruptions.
           </p>
-          <p className="commit-highlight">
+          <p>
             🚀 The games continue — and BuffStreams keeps you connected.
           </p>
-          <Link href="football" className="commit-btn">Watch Live Sports Now</Link>
+          <Link href="football" className="btn">Watch Live Sports Now</Link>
         </div>
       </section>
 
-      <section className="experience-section">
-        <div className="experience-box">
+      <section className="exp">
+        <div className="exp-box">
           <h2>Begin Streaming with BuffStreams</h2>
           <p>
             Sports fans rely on BuffStreams every day for consistent

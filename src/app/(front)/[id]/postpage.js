@@ -93,18 +93,18 @@ export default function PostPage() {
   if (!post) return null;
 
   return (
-    <div className="post-container">
-      <div className="post-card card-glow">
+    <div className="post-wrap">
+      <div className="post-card glow">
 
 
-        <div className="card-header">
+        <div className="post-head">
           <h1 className="post-title">{post.title}</h1>
-          <span className="streams-tag">1 stream</span>
+          <span className="stream-tag">1 stream</span>
         </div>
 
 
         {session?.user?.role === "admin" && (
-          <div className="edit-wrapper">
+          <div className="edit-wrap">
             {editMode ? (
               <div className="edit-box">
                 <input
