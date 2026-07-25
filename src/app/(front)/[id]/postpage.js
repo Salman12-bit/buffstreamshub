@@ -166,17 +166,10 @@ export default function PostPage() {
         ) : (
           <>
 
-            <div className="stream-item">
-              <div className="left">
-                <span className="badge-hd">HD</span>
-                <span className="stream-name">Stream 1</span>
+            <div className="mobile-player">
+              <div className="stream-box">
+                <YouTubePlayer url={post.streamLink} title={post.title} />
               </div>
-              <span className="lang-tag">🌐 English</span>
-            </div>
-
-
-            <div className="stream-box">
-              <YouTubePlayer url={post.streamLink} title={post.title} />
             </div>
           </>
         )}
