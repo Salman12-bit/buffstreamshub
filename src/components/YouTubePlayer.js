@@ -9,7 +9,7 @@ export default function YouTubePlayer({ url, title }) {
 
     if (failed) {
         return (
-            <div style={{ color: "white", padding: "20px", textAlign: "center" }}>
+            <div className="kuch">
                 <h3>⚠ Video can't be embedded</h3>
                 <a
                     href={url.replace("/embed/", "/watch?v=")}
