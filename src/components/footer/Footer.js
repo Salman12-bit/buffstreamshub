@@ -1,44 +1,51 @@
+
 "use client";
 
 import { useEffect, useState } from "react";
-import './footer.css';
-
+import "./footer.css";
 
 export default function Footer() {
   const [visible, setVisible] = useState(false);
 
-  const toggleVisible = () => {
-    const scrolled = document.documentElement.scrollTop;
-    setVisible(scrolled > 200);
-  };
+  useEffect(() => {
+    const handleScroll = () => {
+      setVisible(document.documentElement.scrollTop > 200);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  useEffect(() => {
-    window.addEventListener("scroll", toggleVisible);
-    return () => window.removeEventListener("scroll", toggleVisible);
-  }, []);
-
   return (
     <footer className="footer-container">
-      <div className="footer-left">
-        <p>Copyright © Buffstreamshub.com All Rights Reserved.</p>
+      <div className="footer-main">
+        <h3>BuffStreamsHub</h3>
+
+        <div className="footer-links">
+          <a href="/">Home</a>
+          <a href="policy">Policy</a>
+          <a href="disclaimer">Disclaimer</a>
+          <a href="/contact">Contact Us</a>
+        </div>
       </div>
 
-      <div className="footer-right">
-        <a href="#">Policy</a>
-        <span>|</span>
-        <a href="#">Disclaimer</a>
-        <span>|</span>
-        <a href="contact">Contact Us</a>
+      <p className="footer-disclaimer">
+        We do not host or transmit any audiovisual content. All third-party
+        content belongs to its respective owners and providers.
+      </p>
+
+      <div className="footer-bottom">
+        © {new Date().getFullYear()} BuffStreamsHub. All rights reserved.
       </div>
 
       {visible && (
-        <div className="scroll-top" onClick={scrollToTop}>
-          <span>↑</span>
-        </div>
+        <button className="scroll-top" onClick={scrollToTop}>
+          ↑
+        </button>
       )}
     </footer>
   );
