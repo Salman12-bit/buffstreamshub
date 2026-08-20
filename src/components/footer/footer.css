@@ -1,5 +1,5 @@
 .footer-container {
-  background: #08080d;
+  background: #1c2128;
   color: #fff;
   padding: 30px 7% 18px;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
@@ -15,7 +15,7 @@
 
 .footer-main h3 {
   margin: 0;
-  color: #e50914;
+  color: #fff;
   font-size: 22px;
 }
 
@@ -32,7 +32,7 @@
 }
 
 .footer-links a:hover {
-  color: #e50914;
+  color: #fff;
 }
 
 .footer-disclaimer {
@@ -60,14 +60,14 @@
   height: 42px;
   border: none;
   border-radius: 50%;
-  background: #e50914;
+  background: #000000;
   color: #fff;
   font-size: 20px;
   cursor: pointer;
 }
 
 .scroll-top:hover {
-  background: #ff1722;
+  background: #000000;
 }
 
 
