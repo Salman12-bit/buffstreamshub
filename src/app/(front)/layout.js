@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 export const metadata = {
@@ -23,46 +24,40 @@ export const metadata = {
     },
 };
 
-export default function Layout({ children }) {
+export default function RootLayout({ children }) {
     const structuredData = {
         "@context": "https://schema.org",
         "@type": "WebSite",
-        "name": "Buffstreams: Free HD Live NFL, NBA, UFC & WWE Streaming",
-        "url": "https://buffstreamshub.com",
-        "description":
-            "Stream live sports in HD for free on Buffstreams! Watch NFL, NBA, UFC, WWE, Soccer, Boxing & more with a smooth, user-friendly interface.",
-        "potentialAction": {
+        name: "Buffstreams",
+        url: "https://buffstreamshub.com",
+        description:
+            "Stream live sports in HD for free on Buffstreams!",
+        potentialAction: {
             "@type": "SearchAction",
-            "target": "https://buffstreamshub.com/search?q={search_term_string}",
+            target: "https://buffstreamshub.com/search?q={search_term_string}",
             "query-input": "required name=search_term_string",
         },
-        "publisher": {
+        publisher: {
             "@type": "Organization",
-            "name": "Buffstreams",
-            "logo": {
+            name: "Buffstreams",
+            logo: {
                 "@type": "ImageObject",
-                "url": "https://buffstreamshub.com/favicon.webp",
-                "width": 500,
-                "height": 500,
+                url: "https://buffstreamshub.com/favicon.webp",
             },
-        },
-        "primaryImageOfPage": {
-            "@type": "ImageObject",
-            "url": "https://buffstreamshub.com/images/preview.jpg",
-            "width": 1200,
-            "height": 630,
         },
     };
 
     return (
-        <>
-            {children}
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                    __html: JSON.stringify(structuredData),
-                }}
-            />
-        </>
+        <html lang="en">
+            <body>
+                {children}
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{
+                        __html: JSON.stringify(structuredData),
+                    }}
+                />
+            </body>
+        </html>
     );
 }
