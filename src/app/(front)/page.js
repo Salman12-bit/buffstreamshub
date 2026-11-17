@@ -270,6 +270,62 @@ export default function Home() {
           </p>
         </div>
       </section>
+      <section className="related-sites">
+        <div className="related-inner">
+
+          <div className="related-heading">
+            <span className="related-label">EXPLORE MORE</span>
+            <h2>Our Related Websites</h2>
+            <p>
+              Explore our other websites for more streaming options
+              and useful online tools.
+            </p>
+          </div>
+
+          <div className="related-grid">
+
+            <a
+              href="https://buffstreamz.cyou/"
+              className="related-card"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="related-icon">📺</div>
+              <div className="related-info">
+                <h3>Alternative Streaming Website</h3>
+                <p>
+                  Explore our other sports streaming website
+                  and discover more sports content.
+                </p>
+                <span className="related-link">
+                  Visit Website <span aria-hidden="true">↗</span>
+                </span>
+              </div>
+            </a>
+
+            <a
+              href="https://salaryincreasecalculator.tech/"
+              className="related-card"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="related-icon">🧮</div>
+              <div className="related-info">
+                <h3>Salary Increase Calculator</h3>
+                <p>
+                  Calculate your salary increase and estimate
+                  your new salary in just a few steps.
+                </p>
+                <span className="related-link">
+                  Try Calculator <span aria-hidden="true">↗</span>
+                </span>
+              </div>
+            </a>
+
+          </div>
+
+        </div>
+      </section>
 
     </div>
   );
