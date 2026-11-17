@@ -282,7 +282,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="related-grid">
+          {/* <div className="related-grid">
 
             <a
               href="https://buffstreamz.cyou/"
@@ -322,7 +322,7 @@ export default function Home() {
               </div>
             </a>
 
-          </div>
+          </div> */}
 
         </div>
       </section>
